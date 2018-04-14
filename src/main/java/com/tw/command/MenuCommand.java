@@ -1,4 +1,6 @@
-package com.tw;
+package com.tw.command;
+
+import com.tw.command.Command;
 
 public class MenuCommand implements Command {
 

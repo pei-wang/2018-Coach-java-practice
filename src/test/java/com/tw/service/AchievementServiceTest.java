@@ -1,5 +1,8 @@
-package com.tw;
+package com.tw.service;
 
+import com.tw.domain.Achievement;
+import com.tw.domain.Course;
+import com.tw.domain.Student;
 import org.junit.Before;
 import org.junit.Test;
 

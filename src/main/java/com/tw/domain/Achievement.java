@@ -1,4 +1,4 @@
-package com.tw;
+package com.tw.domain;
 
 public class Achievement {
     private Student student;
@@ -27,7 +27,8 @@ public class Achievement {
         this.course = course;
     }
 
-    public double getScore() {
+    public double
+    getScore() {
         return score;
     }
 

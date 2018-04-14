@@ -1,4 +1,4 @@
-package com.tw;
+package com.tw.domain;
 
 public class Student {
     private String name;

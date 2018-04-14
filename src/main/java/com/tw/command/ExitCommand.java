@@ -1,6 +1,7 @@
-package com.tw;
+package com.tw.command;
 
-import java.util.Map;
+import com.tw.AchievementSystem;
+import com.tw.command.Command;
 
 public class ExitCommand implements Command {
     private AchievementSystem achievementSystem;

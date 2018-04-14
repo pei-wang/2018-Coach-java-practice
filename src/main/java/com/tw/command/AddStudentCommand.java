@@ -1,10 +1,15 @@
-package com.tw;
+package com.tw.command;
 
+
+import com.tw.*;
+import com.tw.domain.Achievement;
+import com.tw.domain.Course;
+import com.tw.domain.Student;
+import com.tw.service.AchievementService;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Scanner;
 
 public class AddStudentCommand implements Command {
     private AchievementService achievementService;
@@ -16,19 +21,19 @@ public class AddStudentCommand implements Command {
     }
 
     public void invoke() {
-        System.out.println("请输入学生信息（格式：姓名, 学号, 学科: 成绩, ...），按回车提交：");
-        Scanner scanner = new Scanner(System.in);
-        String input = scanner.nextLine();
+        Console.println("请输入学生信息（格式：姓名, 学号, 学科: 成绩, ...），按回车提交：");
+        String input = Console.getInput();
         Achievement achievement = null;
         for (; ; ) {
             try {
                 achievement = ParseAchievement(input);
             } catch (Exception e) {
-                e.printStackTrace();
-                System.out.println("请按正确的格式输入（格式：姓名, 学号, 学科: 成绩, ...）：");
-                input = scanner.nextLine();
+                Console.println("请按正确的格式输入（格式：姓名, 学号, 学科: 成绩, ...）：");
+                input = Console.getInput();
             }
-            break;
+            if (achievement != null) {
+                break;
+            }
         }
         achievementService.addAchievement(achievement);
     }

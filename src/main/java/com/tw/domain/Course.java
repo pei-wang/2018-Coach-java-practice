@@ -1,4 +1,4 @@
-package com.tw;
+package com.tw.domain;
 
 public enum Course {
     Math("数学"),
